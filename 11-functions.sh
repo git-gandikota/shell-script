@@ -23,7 +23,7 @@ fi
 dnf install mysql -y
 VALIDATE $? "Installing MySQL"
 
-dnf install gitt -y
+dnf install git -y
 VALIDATE $? "Installing Git"
 
 echo "is script proceeding?"
