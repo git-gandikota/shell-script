@@ -2,10 +2,10 @@
 
 echo "Please enter username::"
 
-read USERNAME #here username in variable
+read -s USERNAME #here username in variable
 
 echo "Please enter password::"
 
-read PASSWORD
+read -s PASSWORD #-s is which we entered will not display while entering
 
 echo "Username is: $USERNAME, Password is: $PASSWORD"
