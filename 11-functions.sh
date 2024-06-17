@@ -26,4 +26,4 @@ VALIDATE $? "Installing MySQL"
 dnf install git -y
 VALIDATE $? "Installing Git"
 
-echo "is script proceeding?"
+echo "All your commands was successfull."
