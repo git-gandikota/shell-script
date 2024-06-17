@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USERID-$(is -u)
+USERID=$(is -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$($0 | cut -d "." -f1)
 LOGFILE=/TMP/$0/$SCRIPT_NAME-$TIMESTAMP.log
