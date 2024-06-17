@@ -1,1 +1,3 @@
-I don't want to push this file
+#!/bin/bash
+
+echo "Hello ,I'm learning DevOps"
