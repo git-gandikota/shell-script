@@ -38,6 +38,7 @@ do
     then
         echo -e "$i already installed...$Y Now it is skipping $N"
     else
-        echo -e "$i not installed...$G Need to install $N"
+        dnf install $i -y &>>$LOGFILE
+        VALIDATE $? "Installation of $i"
     fi
 done
