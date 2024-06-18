@@ -7,13 +7,19 @@ LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
 #This all sentences are used to create a log file
 
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
+
+echo "Script started executing at: $TIMESTAMP"
+
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo "$2....Failed"
+        echo -e "$2....$R Failed $N"
         exit 1
     else
-        echo "$2....suceed"
+        echo -e "$2....$G suceed $N"
     fi
 }
 
@@ -30,5 +36,8 @@ VALIDATE $? "Installing MySQL"
 
 dnf install git -y &>>$LOGFILE
 VALIDATE $? "Installing Git"
+
+dnf install dockerr -y &>>$LOGFILE
+VALIDATE $? "Installing docker"
 
 echo "All your commands was successfull."
